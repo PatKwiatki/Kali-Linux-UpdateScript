@@ -20,7 +20,7 @@ echo -ne "-----------------------------------\n\n"$RED
 
 os=$(grep '^ID=' /etc/os-release | cut -d '=' -f2 | tr -d '"')
 
-if [ "$detected_os" != "kali" ]; then
+if [ "$os" != "kali" ]; then
 	echo -ne $YELL"\n-----------------------------------"
 	echo -ne $RED"\nYou aren't running Kali Linux!\n"
 	echo -ne $YELL"-----------------------------------\n\n"$ENDC
