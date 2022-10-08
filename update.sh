@@ -7,6 +7,26 @@ PURP="\033[1;35m"
 BLUE="\033[1;34m"
 x = 0
 
+if [ "$EUID" != 0 ]; then
+        echo -e "\e[1;41m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ "
+        echo -e " @@@@@@@@@@ SUDO IS NEEDED FOR THIS SCRIPT @@@@@@@@@@ "
+        echo -e " @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[1;m\n\n"
+		exit
+fi
+
+echo -ne $YELL"\n-----------------------------------"
+echo -ne "\nChecking If running Kali Linux\n"
+echo -ne "-----------------------------------\n\n"$RED
+
+os=$(grep '^ID=' /etc/os-release | cut -d '=' -f2 | tr -d '"')
+
+if [ "$os" != "kali" ]; then
+	echo -ne $YELL"\n-----------------------------------"
+	echo -ne $RED"\nYou aren't running Kali Linux!\n"
+	echo -ne $YELL"-----------------------------------\n\n"$ENDC
+
+	exit
+fi
 
 echo -ne $YELL"\n-----------------------------------"
 echo -ne "\nInitializing the Update Sequence\n"
