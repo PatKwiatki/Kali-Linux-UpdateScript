@@ -4,7 +4,7 @@
 
 
 CONFIGURATION:
-Following the steps below will allow you to call the script by entering update.sh from any directory within the terminal. 
+Following the steps below will allow you to call the script by entering sudo bash update.sh from any directory within the terminal. 
 
 
 1. Create a scripts directory in the system wherever you would like 
