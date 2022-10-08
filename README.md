@@ -4,12 +4,12 @@
 
 
 CONFIGURATION:
-Following the steps below will allow you to call the script by entering sudo bash update.sh from any directory within the terminal. 
+Following the steps below will allow you to call the script by simply typing sudo update from any directory within the terminal. 
 
 
-1. Create a scripts directory in the system wherever you would like 
-2. Download or copy the script onto your system and place it into the scripts directory
-3. Open terminal and run the following commands
-4. sudo nano ~/.bashrc
-5. At the bottom of the file enter: PATH="~/scripts:$PATH"
-6. Restart terminal 
+1. Download or copy the script onto your system
+2. Ensure permissions are properly set: chmod 555 update.sh
+3. Move the file to your /bin directroy: mv workingdirectory/update.sh /bin/update
+4. Edit the bash to include necessary path: sudo nano ~/.bashrc
+5. Scroll to the bottom and add: PATH=$PATH:~/bin
+6. Test the script by running update, then sudo update
