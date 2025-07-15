@@ -19,7 +19,7 @@ function menu(){
 	echo -ne "\nThis will complete the same function as regular upgrade with added benefit of handling changing dependencies, removing obsolete packages, and adding new ones\n"$YELL
 	echo -ne "------------------------------------------\n"
 
-	echo -ne "\nWhat Upgrade method are you performing? "
+	echo -ne "\nWhat Upgrade method are you performing? "$ENDC
 	read x
 
 
